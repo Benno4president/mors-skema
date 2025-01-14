@@ -10,19 +10,29 @@ const totalSlots = 65; //65 # (3*5) + (4*5) + (3*4) + (3*4) + 3 + 3
 
  
 function makeWeekSchemaButton() {
+    debugger
     let l = document.getElementById('name_list')
     let members = l.value.split(',')
-    if (members === undefined)
-        alert('oh shiiit we fucked up. List of names cannot be parsed for some reason.. did you comma seperate them?')
-        stop()
-    localStorage.setItem('members_list', members)
-    createTable(createSchema(members, totalSlots))
+    if (members === undefined){
+        alert('oh shiiit we fucked up. List of names cannot be parsed for some reason.. did you comma seperate them?');
+        return;
+    }
+    else if (members.length < 5) {
+        alert("must contain atleast 5 members");
+        return;
+    }
+    else {
+        localStorage.setItem('members_list', members);
+        createTable(createSchema(members, totalSlots));
+    }
 }
 
 function fillNameList() {
     let mlx = localStorage.getItem('members_list')
     let l = document.getElementById('name_list')
-    if (mlx !== null)
+    if (mlx != null)
+        l.value = mlx.toString()
+    else if (mlx.length >= 5)
         l.value = mlx.toString()
     else
         l.value = test_members
