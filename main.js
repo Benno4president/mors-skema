@@ -10,7 +10,6 @@ const totalSlots = 65; //65 # (3*5) + (4*5) + (3*4) + (3*4) + 3 + 3
 
  
 function makeWeekSchemaButton() {
-    debugger
     let l = document.getElementById('name_list')
     let members = l.value.split(',')
     if (members === undefined){
