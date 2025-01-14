@@ -35,7 +35,7 @@ function createSchema(members, slots) {
     let i = 0
     while (i < (Math.floor(slots / members.length)) + 1) {
         shuffle(mem);
-        let s = pickedList.slice(-2);
+        let s = pickedList.slice(-3);
         if (s.includes(mem[0]) || s.includes(mem[1]))
             continue;
         pickedList = pickedList.concat(mem)
