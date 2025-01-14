@@ -8,11 +8,11 @@ const test_members = ['Kristian', 'Emilie', 'Ida R', 'Anton', 'Lucca', 'Jakob'];
 
 const totalSlots = 65; //65 # (3*5) + (4*5) + (3*4) + (3*4) + 3 + 3 
 
- 
+
 function makeWeekSchemaButton() {
     let l = document.getElementById('name_list')
     let members = l.value.split(',')
-    if (members === undefined){
+    if (members === undefined) {
         alert('oh shiiit we fucked up. List of names cannot be parsed for some reason.. did you comma seperate them?');
         return;
     }
@@ -35,7 +35,7 @@ function fillNameList() {
         l.value = mlx.toString()
     else
         l.value = test_members
-    }
+}
 
 // too many slots
 function createSchema(members, slots) {
@@ -106,7 +106,7 @@ function createTable(arr) {
         else
             cell.innerHTML = getThree()
     }
-    
+
 
     let HSArow = table.insertRow();
     let timeHSA = HSArow.insertCell(0)
