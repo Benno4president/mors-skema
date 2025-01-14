@@ -22,7 +22,7 @@ function makeWeekSchemaButton() {
 function fillNameList() {
     let mlx = localStorage.getItem('members_list')
     let l = document.getElementById('name_list')
-    if (mlx !== undefined)
+    if (mlx !== null)
         l.value = mlx.toString()
     else
         l.value = test_members
