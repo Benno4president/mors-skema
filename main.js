@@ -47,7 +47,7 @@ function fillNameList() {
 // too many slots
 function createSchema(members, slots) {
     let mem = members.slice();
-    let mem_buffer_size = Math.min(Math.floor(mem.length*0.5), 12);
+    let mem_buffer_size = Math.min(Math.floor(mem.length*0.5), 13);
     let pickedList = [];
     let i = 0;
     shuffle(mem);
