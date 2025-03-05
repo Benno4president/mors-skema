@@ -71,7 +71,7 @@ function createTable(arr) {
 
     let morning_row = table.insertRow();
     let time_morning = morning_row.insertCell(0)
-    time_morning.innerHTML = "Morgenmad<br>Kl. 08:15-08:30<br>(3 personer)"
+    time_morning.innerHTML = "Morgenmad<br>Kl. 08:10-08:25<br>(3 personer)"
     for (let index = 1; index < 6; index++) {
         let cell = morning_row.insertCell(index)
         cell.innerHTML = getThree()
